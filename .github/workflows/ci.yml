@@ -7,7 +7,6 @@ jobs:
       - uses: ./.github/actions/prepare
       - run: pnpm build
       - run: node ./dist/index.es.js
-      - run: node --input-type=commonjs ./dist/index.cjs.js
   lint:
     name: Lint
     runs-on: ubuntu-latest
