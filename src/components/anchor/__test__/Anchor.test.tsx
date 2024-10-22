@@ -1,0 +1,45 @@
+import { describe, expect, it } from "vitest";
+import { render, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import Anchor from "../Anchor";
+
+describe("Anchor component", () => {
+	it("Outlined Anchor should render correctly", () => {
+		render(
+			<Anchor
+				variant={"outlined"}
+				color={"blue"}
+				darkMode={true}
+				highContrast={false}
+			/>,
+		);
+		const anchor = screen.getByTestId("outlined-anchor");
+		expect(anchor).toBeInTheDocument();
+	});
+
+	it("Contained Anchor should render correctly", () => {
+		render(
+			<Anchor
+				variant={"contained"}
+				color={"blue"}
+				darkMode={true}
+				highContrast={false}
+			/>,
+		);
+		const button = screen.getByTestId("contained-anchor");
+		expect(button).toBeInTheDocument();
+	});
+
+	it("Text Anchor should render correctly", () => {
+		render(
+			<Anchor
+				variant={"text"}
+				color={"blue"}
+				darkMode={true}
+				highContrast={false}
+			/>,
+		);
+		const button = screen.getByTestId("text-anchor");
+		expect(button).toBeInTheDocument();
+	});
+});
