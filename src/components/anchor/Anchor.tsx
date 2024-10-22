@@ -15,7 +15,7 @@ export interface AnchorProps extends RootAnchorProps {
 }
 
 // – – – – – – – – – –
-const OutlinedAnchor = styled.span<RootAnchorProps>(
+const OutlinedAnchor = styled.a<RootAnchorProps>(
 	({ color, darkMode = false, highContrast = false }) => {
 		return {
 			backgroundColor: "transparent",
@@ -32,6 +32,7 @@ const OutlinedAnchor = styled.span<RootAnchorProps>(
 			fontSize: "inherit", // Inherit font size from parent
 			fontWeight: "inherit", // Inherit font weight from parent
 			lineHeight: "inherit", // Inherit line height from parent
+			textDecoration: "none",
 			"&:hover": {
 				outline: "none",
 				backgroundColor: getColorHex(3, color, darkMode), // Light background on hover
@@ -47,7 +48,7 @@ const OutlinedAnchor = styled.span<RootAnchorProps>(
 );
 
 // – – – – – – – – – –
-const ContainedAnchor = styled.span<RootAnchorProps>(
+const ContainedAnchor = styled.a<RootAnchorProps>(
 	({ color, darkMode = false, highContrast = false }) => {
 		return {
 			backgroundColor: getColorHex(2, color, darkMode),
@@ -64,6 +65,7 @@ const ContainedAnchor = styled.span<RootAnchorProps>(
 			fontSize: "inherit", // Inherit font size from parent
 			fontWeight: "inherit", // Inherit font weight from parent
 			lineHeight: "inherit", // Inherit line height from parent
+			textDecoration: "none",
 			"&:hover": {
 				outline: "none",
 				backgroundColor: getColorHex(2, color, darkMode), // Light background on hover
@@ -79,7 +81,7 @@ const ContainedAnchor = styled.span<RootAnchorProps>(
 );
 
 // – – – – – – – – – –
-const TextAnchor = styled.span<RootAnchorProps>(
+const TextAnchor = styled.a<RootAnchorProps>(
 	({ color, darkMode = false, highContrast = false }) => {
 		return {
 			backgroundColor: "transparent",
@@ -96,6 +98,7 @@ const TextAnchor = styled.span<RootAnchorProps>(
 			fontSize: "inherit", // Inherit font size from parent
 			fontWeight: "inherit", // Inherit font weight from parent
 			lineHeight: "inherit", // Inherit line height from parent
+			textDecoration: "none",
 			"&:hover": {
 				outline: "none",
 				backgroundColor: getColorHex(3, color, darkMode), // Light background on hover
@@ -112,16 +115,32 @@ const TextAnchor = styled.span<RootAnchorProps>(
 
 // – – – – – – – – – –
 
-const Anchor = ({ variant, ...props }: AnchorProps) => {
+const Anchor = ({ variant, children, ...props }: AnchorProps) => {
 	switch (variant) {
 		case "outlined":
-			return <OutlinedAnchor data-testid="outlined-anchor" {...props} />;
+			return (
+				<OutlinedAnchor role="button" tabIndex={0} {...props}>
+					{children}
+				</OutlinedAnchor>
+			);
 		case "contained":
-			return <ContainedAnchor data-testid="contained-anchor" {...props} />;
+			return (
+				<ContainedAnchor role="button" tabIndex={0} {...props}>
+					{children}
+				</ContainedAnchor>
+			);
 		case "text":
-			return <TextAnchor data-testid="text-anchor" {...props} />;
+			return (
+				<TextAnchor role="button" tabIndex={0} {...props}>
+					{children}
+				</TextAnchor>
+			);
 		default:
-			return <OutlinedAnchor data-testid="outlined-anchor" {...props} />;
+			return (
+				<OutlinedAnchor role="button" tabIndex={0} {...props}>
+					{children}
+				</OutlinedAnchor>
+			);
 	}
 };
 
