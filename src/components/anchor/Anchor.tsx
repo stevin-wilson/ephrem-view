@@ -16,7 +16,7 @@ export interface AnchorProps extends RootAnchorProps {
 
 // – – – – – – – – – –
 const OutlinedAnchor = styled.a<RootAnchorProps>(
-	({ color, darkMode = false, highContrast = false }) => {
+	({ color, darkMode = false, highContrast = false }: RootAnchorProps) => {
 		return {
 			backgroundColor: "transparent",
 			border: `1px solid`,
@@ -49,7 +49,7 @@ const OutlinedAnchor = styled.a<RootAnchorProps>(
 
 // – – – – – – – – – –
 const ContainedAnchor = styled.a<RootAnchorProps>(
-	({ color, darkMode = false, highContrast = false }) => {
+	({ color, darkMode = false, highContrast = false }: RootAnchorProps) => {
 		return {
 			backgroundColor: getColorHex(2, color, darkMode),
 			border: `1px solid`,
@@ -82,7 +82,7 @@ const ContainedAnchor = styled.a<RootAnchorProps>(
 
 // – – – – – – – – – –
 const TextAnchor = styled.a<RootAnchorProps>(
-	({ color, darkMode = false, highContrast = false }) => {
+	({ color, darkMode = false, highContrast = false }: RootAnchorProps) => {
 		return {
 			backgroundColor: "transparent",
 			border: `1px solid`,
