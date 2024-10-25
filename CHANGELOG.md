@@ -1,3 +1,9 @@
+# [0.2.0](https://github.com/stevin-wilson/ephrem-view/compare/0.1.0...0.2.0) (2024-10-25)
+
+### Features
+
+- Display passages from API.Bible ([3cabb28](https://github.com/stevin-wilson/ephrem-view/commit/3cabb289b410db23936d22774f1de426b4de6ccb))
+
 # 0.1.0 (2024-10-25)
 
 ### Bug Fixes

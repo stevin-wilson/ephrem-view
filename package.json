@@ -1,6 +1,6 @@
 {
 	"name": "ephrem-view",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"description": "Ephrem-view is a React component library for rendering scripture passages retrieved from API.Bible and Ephrem, providing flexible and responsive designs for seamless scriptural presentation.",
 	"repository": {
 		"type": "git",
