@@ -119,19 +119,34 @@ const Anchor = ({ variant, children, ...props }: AnchorProps) => {
 	switch (variant) {
 		case "outlined":
 			return (
-				<OutlinedAnchor role="button" tabIndex={0} {...props}>
+				<OutlinedAnchor
+					role="button"
+					tabIndex={0}
+					data-testid="outlined-anchor"
+					{...props}
+				>
 					{children}
 				</OutlinedAnchor>
 			);
 		case "contained":
 			return (
-				<ContainedAnchor role="button" tabIndex={0} {...props}>
+				<ContainedAnchor
+					role="button"
+					tabIndex={0}
+					data-testid="contained-anchor"
+					{...props}
+				>
 					{children}
 				</ContainedAnchor>
 			);
 		case "text":
 			return (
-				<TextAnchor role="button" tabIndex={0} {...props}>
+				<TextAnchor
+					role="button"
+					tabIndex={0}
+					data-testid="text-anchor"
+					{...props}
+				>
 					{children}
 				</TextAnchor>
 			);

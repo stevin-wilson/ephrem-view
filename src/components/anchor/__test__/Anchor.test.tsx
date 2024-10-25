@@ -11,7 +11,9 @@ describe("Anchor component", () => {
 				color={"blue"}
 				darkMode={true}
 				highContrast={false}
-			/>,
+			>
+				{"Outlined Anchor"}
+			</Anchor>,
 		);
 		const anchor = screen.getByTestId("outlined-anchor");
 		expect(anchor).toBeInTheDocument();
@@ -24,7 +26,9 @@ describe("Anchor component", () => {
 				color={"blue"}
 				darkMode={true}
 				highContrast={false}
-			/>,
+			>
+				{"Contained Anchor"}
+			</Anchor>,
 		);
 		const button = screen.getByTestId("contained-anchor");
 		expect(button).toBeInTheDocument();
@@ -37,7 +41,9 @@ describe("Anchor component", () => {
 				color={"blue"}
 				darkMode={true}
 				highContrast={false}
-			/>,
+			>
+				{"Text Anchor"}
+			</Anchor>,
 		);
 		const button = screen.getByTestId("text-anchor");
 		expect(button).toBeInTheDocument();
