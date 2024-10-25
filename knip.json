@@ -3,5 +3,5 @@
 	"entry": ["src/index.ts!"],
 	"ignoreExportsUsedInFile": { "interface": true, "type": true },
 	"project": ["src/**/*.ts!", "src/**/*.tsx!", "src/**/*.mdx!"],
-	"ignoreDependencies": ["@storybook/blocks", "@testing-library/react"]
+	"ignoreDependencies": ["@storybook/blocks"]
 }
