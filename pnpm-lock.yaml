@@ -28,8 +28,8 @@ importers:
         version: 18.3.1(react@18.3.1)
     devDependencies:
       '@chromatic-com/storybook':
-        specifier: 2.0.2
-        version: 2.0.2(react@18.3.1)
+        specifier: 3.0.0
+        version: 3.0.0(react@18.3.1)(storybook@8.3.6)
       '@release-it/conventional-changelog':
         specifier: 9.0.0
         version: 9.0.0(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.0.0)(release-it@17.10.0(typescript@5.6.3))
@@ -244,9 +244,11 @@ packages:
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
 
-  '@chromatic-com/storybook@2.0.2':
-    resolution: {integrity: sha512-7bPIliISedeIpnVKbzktysFYW5n56bN91kxuOj1XXKixmjbUHRUMvcXd4K2liN6MiR5ZqJtmtcPsZ6CebbGlEA==}
+  '@chromatic-com/storybook@3.0.0':
+    resolution: {integrity: sha512-6o2/RRs59vcPFehnFC/phX+SZK3ByPN3ix7jr+v+pZAMwliDppFF0GEJ4+SKTaoKY8NtPs0JTFDSQnY1YWgK3Q==}
     engines: {node: '>=16.0.0', yarn: '>=1.22.18'}
+    peerDependencies:
+      storybook: ^8.3.0
 
   '@conventional-changelog/git-client@1.0.1':
     resolution: {integrity: sha512-PJEqBwAleffCMETaVm/fUgHldzBE35JFk3/9LL6NUA5EXa3qednu+UT6M7E5iBu3zIQZCULYIiZ90fBYHt6xUw==}
@@ -1204,6 +1206,11 @@ packages:
       vite-plugin-glimmerx:
         optional: true
 
+  '@storybook/channels@8.3.6':
+    resolution: {integrity: sha512-6ahY0n1A19diR5cI63lhDEpMaDsq7LFtMOgWab2NwCsdXoEAl6anvDptyPWW60umN3HrDzSKFdpRx4imOEjlWw==}
+    peerDependencies:
+      storybook: ^8.3.6
+
   '@storybook/components@8.3.6':
     resolution: {integrity: sha512-TXuoGZY7X3iixF45lXkYOFk8k2q9OHcqHyHyem1gATLLQXgyOvDgzm+VB7uKBNzssRQPEE+La70nfG8bq/viRw==}
     peerDependencies:
@@ -1276,6 +1283,11 @@ packages:
       typescript:
         optional: true
 
+  '@storybook/telemetry@8.3.6':
+    resolution: {integrity: sha512-fhpbZok7mPeujjFxAKo2vuqhfjhv5BO/mHH7Z8QtgsYqeR7px56arDRgV6CngBZWgFvrQ2wBS0HPV4nB6YWvJQ==}
+    peerDependencies:
+      storybook: ^8.3.6
+
   '@storybook/test@8.3.6':
     resolution: {integrity: sha512-WIc8LzK9jaEw+e3OiweEM2j3cppPzsWod59swuf6gDBf176EQLIyjtVc+Kh3qO4NNkcL+lwmqaLPjOxlBLaDbg==}
     peerDependencies:
@@ -1283,6 +1295,11 @@ packages:
 
   '@storybook/theming@8.3.6':
     resolution: {integrity: sha512-LQjUk6GXRW9ELkoBKuqzQKFUW+ajfGPfVELcfs3/VQX61VhthJ4olov4bGPc04wsmmFMgN/qODxT485IwOHfPQ==}
+    peerDependencies:
+      storybook: ^8.3.6
+
+  '@storybook/types@8.3.6':
+    resolution: {integrity: sha512-EY+bjIxxmKkFrL7CyDQb3EXbmy0+Y9OieaPrNNM7QXTfGgp81lXhfqMX3HLMMjplk+rcxVJLyzXSBx0nIn91fQ==}
     peerDependencies:
       storybook: ^8.3.6
 
@@ -4989,12 +5006,16 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
-  '@chromatic-com/storybook@2.0.2(react@18.3.1)':
+  '@chromatic-com/storybook@3.0.0(react@18.3.1)(storybook@8.3.6)':
     dependencies:
+      '@storybook/channels': 8.3.6(storybook@8.3.6)
+      '@storybook/telemetry': 8.3.6(storybook@8.3.6)
+      '@storybook/types': 8.3.6(storybook@8.3.6)
       chromatic: 11.12.6
       filesize: 10.1.6
       jsonfile: 6.1.0
       react-confetti: 6.1.0(react@18.3.1)
+      storybook: 8.3.6
       strip-ansi: 7.1.0
     transitivePeerDependencies:
       - '@chromatic-com/cypress'
@@ -5896,6 +5917,10 @@ snapshots:
       - supports-color
       - webpack-sources
 
+  '@storybook/channels@8.3.6(storybook@8.3.6)':
+    dependencies:
+      storybook: 8.3.6
+
   '@storybook/components@8.3.6(storybook@8.3.6)':
     dependencies:
       storybook: 8.3.6
@@ -6012,6 +6037,10 @@ snapshots:
       '@storybook/test': 8.3.6(storybook@8.3.6)
       typescript: 5.6.3
 
+  '@storybook/telemetry@8.3.6(storybook@8.3.6)':
+    dependencies:
+      storybook: 8.3.6
+
   '@storybook/test@8.3.6(storybook@8.3.6)':
     dependencies:
       '@storybook/csf': 0.1.11
@@ -6026,6 +6055,10 @@ snapshots:
       util: 0.12.5
 
   '@storybook/theming@8.3.6(storybook@8.3.6)':
+    dependencies:
+      storybook: 8.3.6
+
+  '@storybook/types@8.3.6(storybook@8.3.6)':
     dependencies:
       storybook: 8.3.6
 
