@@ -13,5 +13,5 @@
 		"src/components/view/__test__/View.test.tsx",
 		"src/components/passage/scripture-styles.css"
 	],
-	"words": ["ephrem", "tseslint", "Stevin", "popperjs"]
+	"words": ["ephrem", "tseslint", "Stevin", "popperjs", "Berean"]
 }

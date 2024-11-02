@@ -17,15 +17,96 @@
 
 ## Usage
 
+### Installation
+
+To use the PassageView component in your project, follow these steps:
+
 ```shell
 npm i ephrem-view
 ```
 
-```ts
-import { greet } from "ephrem-view";
+### Importing and Using PassageView
 
-greet("Hello, world! 💖");
+Import the `PassageView` component into your React application:
+
+```tsx
+import React from "react";
+import PassageView from "ephrem-view";
+
+const App = () => {
+	const bibleName = "Berean Standard Bible";
+	const reference = "1 John 3:18";
+	const content =
+		'<p class="b"></p><p class="m">Little children, let us love not in word and speech, but in action and truth. </p>';
+	const rtl = false;
+	const copyright =
+		"The Holy Bible, Berean Standard Bible, BSB is produced in cooperation with Bible Hub, Discovery Bible, OpenBible.com, and the Berean Bible Translation Committee. This text of God's Word has been dedicated to the public domain";
+
+	return (
+		<div
+			style={{
+				display: "flex",
+				justifyContent: "center",
+				alignItems: "center",
+				height: "100%",
+			}}
+		>
+			<p style={{ lineHeight: 1.5 }}>
+				St. Gregory the Great says, “The proof of love is in the works. Where
+				love exists, it works great things. But when it ceases to act, it ceases
+				to exist,” echoing the Apostle John’s words in{" "}
+				<PassageView
+					variant={variant}
+					color={color}
+					darkMode={darkMode}
+					highContrast={highContrast}
+					bibleName={bibleName}
+					content={content}
+					copyright={copyright}
+					reference={reference}
+					rtl={rtl}
+				>
+					1 John 3:18
+				</PassageView>
+			</p>
+		</div>
+	);
+};
+
+export default App;
 ```
+
+### Props
+
+The `PassageView` component accepts the following props:
+
+`bibleName`: The name of the Bible version.
+`reference`: The scripture reference.
+`content`: The content of the passage in HTML format.
+`rtl`: Boolean indicating if the text direction is right-to-left.
+`copyright`: Copyright information for the passage.
+`variant`: The variant of the view ("outlined", "contained", or "text").
+`color`: The color theme for the view.
+`darkMode`: Boolean indicating if dark mode is enabled.
+`highContrast`: Boolean indicating if high contrast mode is enabled.
+`children`: The text to be displayed as the anchor.
+
+### Screenshots
+
+#### Outlined Variant
+
+![Outlined Variant - Inactive](assets/outlined-inactive.png)
+![Outlined Variant - Active](assets/outlined-active.png)
+
+#### Contained Variant
+
+![Contained Variant - Inactive](assets/contained-inactive.png)
+![Contained Variant - Active](assets/contained-active.png)
+
+#### Text Variant
+
+![Text Variant - Inactive](assets/text-inactive.png)
+![Text Variant - Active](assets/text-active.png)
 
 ## Contributors
 

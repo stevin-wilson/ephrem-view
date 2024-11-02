@@ -5,6 +5,7 @@ import { SupportedColors } from "../utils.ts";
 import React, { useEffect, useRef, useState } from "react";
 import { usePopper } from "react-popper";
 import Anchor from "../anchor/Anchor.tsx";
+import { Boundary } from "@popperjs/core";
 
 export interface PassageViewProps extends BiblePassageDisplayProps {
 	variant: "outlined" | "contained" | "text";
@@ -22,7 +23,30 @@ const PassageView = ({ children, ...props }: PassageViewProps) => {
 		anchorRef.current,
 		popperRef.current,
 		{
-			placement: "bottom",
+			placement: "auto",
+			modifiers: [
+				{
+					name: "offset",
+					options: {
+						offset: [0, 10],
+					},
+				},
+				{
+					name: "preventOverflow",
+					options: {
+						boundary: "viewport" as Boundary,
+						rootBoundary: "viewport",
+						altAxis: true,
+						padding: 8, // Add some padding from edges
+					},
+				},
+				{
+					name: "flip",
+					options: {
+						fallbackPlacements: ["bottom", "top", "right", "left"],
+					},
+				},
+			],
 		},
 	);
 
@@ -51,6 +75,14 @@ const PassageView = ({ children, ...props }: PassageViewProps) => {
 		};
 	}, [update]);
 
+	useEffect(() => {
+		if (showPopper) {
+			document.body.style.overflow = "hidden"; // Prevent body scrolling
+		} else {
+			document.body.style.overflow = ""; // Reset when popper is hidden
+		}
+	}, [showPopper]);
+
 	const renderAnchor = () => {
 		return (
 			<Anchor
@@ -67,12 +99,18 @@ const PassageView = ({ children, ...props }: PassageViewProps) => {
 	};
 
 	return (
-		<div>
+		<span>
 			{renderAnchor()}
 			{showPopper && (
 				<div
 					ref={popperRef}
-					style={styles.popper}
+					style={{
+						...styles.popper,
+						maxWidth: "90vw",
+						maxHeight: "90vh",
+						overflow: "auto",
+						width: "fit-content",
+					}}
 					{...attributes.popper}
 					data-testid="passage-view-popper"
 				>
@@ -95,7 +133,7 @@ const PassageView = ({ children, ...props }: PassageViewProps) => {
 					</div>
 				</div>
 			)}
-		</div>
+		</span>
 	);
 };
 
