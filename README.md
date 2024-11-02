@@ -91,6 +91,23 @@ The `PassageView` component accepts the following props:
 `highContrast`: Boolean indicating if high contrast mode is enabled.
 `children`: The text to be displayed as the anchor.
 
+### Screenshots
+
+#### Outlined Variant
+
+![Outlined Variant - Inactive](assets/outlined-inactive.png)
+![Outlined Variant - Active](assets/outlined-active.png)
+
+#### Contained Variant
+
+![Contained Variant - Inactive](assets/contained-inactive.png)
+![Contained Variant - Active](assets/contained-active.png)
+
+#### Text Variant
+
+![Text Variant - Inactive](assets/text-inactive.png)
+![Text Variant - Active](assets/text-active.png)
+
 ## Contributors
 
 <!-- spellchecker: disable -->
