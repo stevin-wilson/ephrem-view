@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import { getColorHex, SupportedColors } from "../utils.ts";
+import React from "react";
 
 // – – – – – – – – – –
 interface RootAnchorProps {
@@ -12,12 +13,17 @@ interface RootAnchorProps {
 // – – – – – – – – – –
 export interface AnchorProps extends RootAnchorProps {
 	variant: "outlined" | "contained" | "text";
+	onMouseEnter?: () => void;
+	onMouseLeave?: () => void;
+	onFocus?: () => void;
+	onBlur?: () => void;
 }
 
 // – – – – – – – – – –
 const OutlinedAnchor = styled.a<RootAnchorProps>(
 	({ color, darkMode = false, highContrast = false }: RootAnchorProps) => {
 		return {
+			display: "inline",
 			backgroundColor: "transparent",
 			border: `1px solid`,
 			borderColor: getColorHex(6, color, darkMode), // Using color9 for border
@@ -51,6 +57,7 @@ const OutlinedAnchor = styled.a<RootAnchorProps>(
 const ContainedAnchor = styled.a<RootAnchorProps>(
 	({ color, darkMode = false, highContrast = false }: RootAnchorProps) => {
 		return {
+			display: "inline",
 			backgroundColor: getColorHex(2, color, darkMode),
 			border: `1px solid`,
 			borderColor: "transparent",
@@ -84,6 +91,7 @@ const ContainedAnchor = styled.a<RootAnchorProps>(
 const TextAnchor = styled.a<RootAnchorProps>(
 	({ color, darkMode = false, highContrast = false }: RootAnchorProps) => {
 		return {
+			display: "inline",
 			backgroundColor: "transparent",
 			border: `1px solid`,
 			borderColor: "transparent",
@@ -115,48 +123,55 @@ const TextAnchor = styled.a<RootAnchorProps>(
 
 // – – – – – – – – – –
 
-const Anchor = ({ variant, children, ...props }: AnchorProps) => {
-	switch (variant) {
-		case "outlined":
-			return (
-				<OutlinedAnchor
-					role="button"
-					tabIndex={0}
-					data-testid="outlined-anchor"
-					{...props}
-				>
-					{children}
-				</OutlinedAnchor>
-			);
-		case "contained":
-			return (
-				<ContainedAnchor
-					role="button"
-					tabIndex={0}
-					data-testid="contained-anchor"
-					{...props}
-				>
-					{children}
-				</ContainedAnchor>
-			);
-		case "text":
-			return (
-				<TextAnchor
-					role="button"
-					tabIndex={0}
-					data-testid="text-anchor"
-					{...props}
-				>
-					{children}
-				</TextAnchor>
-			);
-		default:
-			return (
-				<OutlinedAnchor role="button" tabIndex={0} {...props}>
-					{children}
-				</OutlinedAnchor>
-			);
-	}
-};
+const Anchor = React.forwardRef<HTMLAnchorElement, AnchorProps>(
+	({ variant, children, ...props }, ref) => {
+		switch (variant) {
+			case "outlined":
+				return (
+					<OutlinedAnchor
+						ref={ref}
+						role="button"
+						tabIndex={0}
+						data-testid="outlined-anchor"
+						{...props}
+					>
+						{children}
+					</OutlinedAnchor>
+				);
+			case "contained":
+				return (
+					<ContainedAnchor
+						ref={ref}
+						role="button"
+						tabIndex={0}
+						data-testid="contained-anchor"
+						{...props}
+					>
+						{children}
+					</ContainedAnchor>
+				);
+			case "text":
+				return (
+					<TextAnchor
+						ref={ref}
+						role="button"
+						tabIndex={0}
+						data-testid="text-anchor"
+						{...props}
+					>
+						{children}
+					</TextAnchor>
+				);
+			default:
+				return (
+					<OutlinedAnchor ref={ref} role="button" tabIndex={0} {...props}>
+						{children}
+					</OutlinedAnchor>
+				);
+		}
+	},
+);
+
+Anchor.displayName = "Anchor";
 
 export default Anchor;
