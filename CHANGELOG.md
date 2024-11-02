@@ -1,3 +1,9 @@
+# [0.5.0](https://github.com/stevin-wilson/ephrem-view/compare/0.4.0...0.5.0) (2024-11-02)
+
+### Features
+
+- add screenshots ([d59e2c5](https://github.com/stevin-wilson/ephrem-view/commit/d59e2c554afa701cd1d1cf8c22ef1f7570142a3c))
+
 # [0.4.0](https://github.com/stevin-wilson/ephrem-view/compare/0.3.0...0.4.0) (2024-11-02)
 
 ### Bug Fixes
