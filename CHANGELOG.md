@@ -1,3 +1,14 @@
+# [0.4.0](https://github.com/stevin-wilson/ephrem-view/compare/0.3.0...0.4.0) (2024-11-02)
+
+### Bug Fixes
+
+- spelling linting error ([5334421](https://github.com/stevin-wilson/ephrem-view/commit/53344213d800e4f0e84cfd9d62afb98ba88e8200))
+- update README to include usage ([25f1297](https://github.com/stevin-wilson/ephrem-view/commit/25f1297f163dda16ff70940cb5132c472acdb95c))
+
+### Features
+
+- add screenshots ([1b3727e](https://github.com/stevin-wilson/ephrem-view/commit/1b3727e7aeedbc89cdf3c86b50420337344f5cb1))
+
 # [0.3.0](https://github.com/stevin-wilson/ephrem-view/compare/0.2.0...0.3.0) (2024-11-02)
 
 ### Bug Fixes
