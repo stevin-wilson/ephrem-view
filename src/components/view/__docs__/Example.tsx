@@ -38,6 +38,7 @@ const Example: FC<PassageViewProps> = ({
 				>
 					1 John 3:18
 				</PassageView>
+				.
 			</p>
 		</div>
 	);
