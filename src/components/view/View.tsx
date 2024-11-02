@@ -70,7 +70,12 @@ const PassageView = ({ children, ...props }: PassageViewProps) => {
 		<div>
 			{renderAnchor()}
 			{showPopper && (
-				<div ref={popperRef} style={styles.popper} {...attributes.popper}>
+				<div
+					ref={popperRef}
+					style={styles.popper}
+					{...attributes.popper}
+					data-testid="passage-view-popper"
+				>
 					<div
 						style={{
 							backgroundColor: "white",

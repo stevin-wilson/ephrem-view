@@ -9,7 +9,9 @@
 		"pnpm-lock.yaml",
 		"src/components/passage/__docs__/Passage.stories.tsx",
 		"src/components/passage/__test__/Passage.test.tsx",
+		"src/components/view/__docs__/View.stories.tsx",
+		"src/components/view/__test__/View.test.tsx",
 		"src/components/passage/scripture-styles.css"
 	],
-	"words": ["ephrem", "tseslint", "Stevin"]
+	"words": ["ephrem", "tseslint", "Stevin", "popperjs"]
 }
