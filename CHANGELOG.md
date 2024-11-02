@@ -1,3 +1,14 @@
+# [0.3.0](https://github.com/stevin-wilson/ephrem-view/compare/0.2.0...0.3.0) (2024-11-02)
+
+### Bug Fixes
+
+- knip errors ([5b79b2a](https://github.com/stevin-wilson/ephrem-view/commit/5b79b2a1673b26bfcaeff06c9ac8739fcc50454d))
+- remove unused components ([95ea52e](https://github.com/stevin-wilson/ephrem-view/commit/95ea52e20b653cd907d36789331da23cfa7bf391))
+
+### Features
+
+- display passage using a popper ([b178edb](https://github.com/stevin-wilson/ephrem-view/commit/b178edb8ae745ab53423104773269e9deefb2625))
+
 # [0.2.0](https://github.com/stevin-wilson/ephrem-view/compare/0.1.0...0.2.0) (2024-10-25)
 
 ### Features
