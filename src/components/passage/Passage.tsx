@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
-import "./api-bible.css";
+import "./scripture-styles.css";
 import parse from "html-react-parser";
 
 // – – – – – – – – – –
@@ -133,11 +133,14 @@ const Container = styled.div`
 	flex-direction: column;
 	align-items: center;
 	width: 100%;
+	max-width: 600px; /* Set a maximum width for larger screens */
 	padding: 10px;
 	box-sizing: border-box;
+	margin: 0 auto; /* Center the container */
 
 	@media (max-width: 600px) {
 		padding: 5px;
+		max-width: 100%; /* Full width for small screens */
 	}
 `;
 
