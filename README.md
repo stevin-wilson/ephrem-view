@@ -80,16 +80,16 @@ export default App;
 
 The `PassageView` component accepts the following props:
 
-`bibleName`: The name of the Bible version.
-`reference`: The scripture reference.
-`content`: The content of the passage in HTML format.
-`rtl`: Boolean indicating if the text direction is right-to-left.
-`copyright`: Copyright information for the passage.
-`variant`: The variant of the view ("outlined", "contained", or "text").
-`color`: The color theme for the view.
-`darkMode`: Boolean indicating if dark mode is enabled.
-`highContrast`: Boolean indicating if high contrast mode is enabled.
-`children`: The text to be displayed as the anchor.
+- `bibleName`: The name of the Bible version.
+- `reference`: The scripture reference.
+- `content`: The content of the passage in HTML format (retrieved from API.Bible).
+- `rtl`: Boolean indicating if the text direction is right-to-left.
+- `copyright`: Copyright information for the passage.
+- `variant`: The variant of the view ("outlined", "contained", or "text").
+- `color`: The color theme for the view.
+- `darkMode`: Boolean indicating if dark mode is enabled.
+- `highContrast`: Boolean indicating if high contrast mode is enabled.
+- `children`: The text to be displayed as the anchor.
 
 ### Screenshots
 
@@ -109,6 +109,9 @@ The `PassageView` component accepts the following props:
 ![Text Variant - Active](assets/text-active.png)
 
 ## Contributors
+
+We would like to express our gratitude to the [American Bible Society](http://www.americanbible.org/) for creating and maintaining the [scripture-styles](https://github.com/americanbible/scripture-styles) repository, which is used to style scripture text in the Ephrem View tool.
+We also thank the [API.Bible](https://scripture.api.bible/) team for providing the API that allows to retrieve scripture passages for display in Ephrem View.
 
 <!-- spellchecker: disable -->
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
