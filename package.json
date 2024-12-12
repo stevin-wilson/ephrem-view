@@ -59,7 +59,7 @@
 		"@storybook/react-vite": "8.4.0",
 		"@storybook/test": "8.4.0",
 		"@testing-library/jest-dom": "6.6.2",
-		"@testing-library/react": "16.0.1",
+		"@testing-library/react": "16.1.0",
 		"@types/node": "22.10.0",
 		"@types/react": "18.3.11",
 		"@typescript-eslint/eslint-plugin": "8.17.0",
