@@ -1,3 +1,9 @@
+## [0.5.1](https://github.com/stevin-wilson/ephrem-view/compare/0.5.0...0.5.1) (2024-12-13)
+
+### Bug Fixes
+
+- **deps:** update dependency html-react-parser to v5.2.0 ([#59](https://github.com/stevin-wilson/ephrem-view/issues/59)) ([f9debb8](https://github.com/stevin-wilson/ephrem-view/commit/f9debb8b9c06afe7c745cd0976f0cd4c54368ed5))
+
 # [0.5.0](https://github.com/stevin-wilson/ephrem-view/compare/0.4.0...0.5.0) (2024-11-02)
 
 ### Features
