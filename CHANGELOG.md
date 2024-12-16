@@ -1,3 +1,9 @@
+## [0.5.2](https://github.com/stevin-wilson/ephrem-view/compare/0.5.1...0.5.2) (2024-12-16)
+
+### Bug Fixes
+
+- **deps:** update emotion monorepo to v11.14.0 ([#62](https://github.com/stevin-wilson/ephrem-view/issues/62)) ([abcf6c0](https://github.com/stevin-wilson/ephrem-view/commit/abcf6c0aef3e1d0e5cb99d3e1dfba14be34a6d87))
+
 ## [0.5.1](https://github.com/stevin-wilson/ephrem-view/compare/0.5.0...0.5.1) (2024-12-13)
 
 ### Bug Fixes
