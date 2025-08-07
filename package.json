@@ -86,7 +86,7 @@
 		"release-it": "19.0.0",
 		"sentences-per-line": "0.3.0",
 		"storybook": "8.6.0",
-		"typescript": "5.8.2",
+		"typescript": "5.9.2",
 		"vite": "6.3.2",
 		"vite-plugin-dts": "4.5.0",
 		"vitest": "3.0.0"
