@@ -34,8 +34,8 @@ importers:
         version: 2.3.0(@popperjs/core@2.11.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
     devDependencies:
       '@chromatic-com/storybook':
-        specifier: 5.0.0
-        version: 5.0.0(storybook@8.6.0(prettier@3.8.0))
+        specifier: 5.1.0
+        version: 5.1.0(storybook@8.6.0(prettier@3.8.0))
       '@release-it/conventional-changelog':
         specifier: 10.0.0
         version: 10.0.0(conventional-commits-filter@5.0.0)(conventional-commits-parser@6.3.0)(release-it@19.2.0(@types/node@24.12.0)(magicast@0.5.2))
@@ -294,11 +294,11 @@ packages:
     resolution: {integrity: sha512-ctxtJ/eA+t+6q2++vj5j7FYX3nRu311q1wfYH3xjlLOsczhlhxAg2FWNUXhpGvAw3BWo1xBcvOV6/YLc2r5FJw==}
     hasBin: true
 
-  '@chromatic-com/storybook@5.0.0':
-    resolution: {integrity: sha512-8wUsqL8kg6R5ue8XNE7Jv/iD1SuE4+6EXMIGIuE+T2loBITEACLfC3V8W44NJviCLusZRMWbzICddz0nU0bFaw==}
+  '@chromatic-com/storybook@5.1.0':
+    resolution: {integrity: sha512-bXR1RxDO06QltZXYx4z7vxMgNtwKE7+fvRS2mNmPiheaKfld9fGH967ktAFrWCRn53MKIDVi4jipGJ5fEjePqA==}
     engines: {node: '>=20.0.0', yarn: '>=1.22.18'}
     peerDependencies:
-      storybook: ^0.0.0-0 || ^10.1.0 || ^10.1.0-0 || ^10.2.0-0 || ^10.3.0-0
+      storybook: ^0.0.0-0 || ^10.1.0 || ^10.1.0-0 || ^10.2.0-0 || ^10.3.0-0 || ^10.4.0-0
 
   '@conventional-changelog/git-client@1.0.1':
     resolution: {integrity: sha512-PJEqBwAleffCMETaVm/fUgHldzBE35JFk3/9LL6NUA5EXa3qednu+UT6M7E5iBu3zIQZCULYIiZ90fBYHt6xUw==}
@@ -5175,7 +5175,7 @@ snapshots:
     dependencies:
       css-tree: 3.2.1
 
-  '@chromatic-com/storybook@5.0.0(storybook@8.6.0(prettier@3.8.0))':
+  '@chromatic-com/storybook@5.1.0(storybook@8.6.0(prettier@3.8.0))':
     dependencies:
       '@neoconfetti/react': 1.0.0
       chromatic: 13.3.5
