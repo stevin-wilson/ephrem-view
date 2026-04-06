@@ -44,7 +44,7 @@
 		"@emotion/styled": "^11.13.0",
 		"@popperjs/core": "^2.11.8",
 		"@radix-ui/colors": "^3.0.0",
-		"html-react-parser": "^5.1.18",
+		"html-react-parser": "^6.0.0",
 		"react-popper": "^2.3.0"
 	},
 	"devDependencies": {
